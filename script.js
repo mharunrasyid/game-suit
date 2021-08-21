@@ -25,10 +25,7 @@ btnPlayerImg.forEach(m => {
 })
 
 btnResetScor.addEventListener('click', function () {
-    windowScroll(0);
-    setTimeout(() => {
         window.location.reload();
-    }, 400);
 })
 
 function compOption() {
