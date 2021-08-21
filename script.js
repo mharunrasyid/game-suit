@@ -25,7 +25,10 @@ btnPlayerImg.forEach(m => {
 })
 
 btnResetScor.addEventListener('click', function () {
-    window.location.reload();
+    windowScroll(0);
+    setTimeout(() => {
+        window.location.reload();
+    }, 400);
 })
 
 function compOption() {
@@ -73,12 +76,7 @@ function hidePopupBox() {
         m.style.background = 'white';
     })
 
-    window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
-
+    windowScroll(0);
 }
 
 function gameResults(playerImg, compImg) {
@@ -141,18 +139,18 @@ function gameResults(playerImg, compImg) {
 
 let heightScrolled = document.body.scrollHeight / 1.7;
 
+function windowScroll(scroll) {
+    window.scroll({
+        top: scroll,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
 function scrollDown(x) {
     if (x.matches) {
-        window.scroll({
-            top: heightScrolled,
-            left: 0,
-            behavior: 'smooth'
-        });
+        windowScroll(heightScrolled);
     } else {
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
+        windowScroll(0);
     }
 }
