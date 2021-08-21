@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game SUIT ✊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="player-area">
+            <h1 class="player-header">YOU : <span class="scor-player">0</span></h1>
+            <h1 class="player-header player-content">SILAHKAN PILIH BATU / GUNTING / KERTAS </h1>
+            <div class="img-player-container">
+                <div class="img-player-parent" data-img="batu">
+                    <img src="img/batu.png" alt="batu" class="img-player">
+                </div>
+                <div class="img-player-parent" data-img="gunting">
+                    <img src="img/gunting.png" alt="gunting" class="img-player">
+                </div>
+                <div class="img-player-parent" data-img="kertas">
+                    <img src="img/kertas.png" alt="kertas" class="img-player">
+                </div>
+            </div>
+        </section>
+        <div class="vs-area">
+            <h1 class="vs-txt">VS</h1>
+            <div class="rectangle-vs"></div>
+        </div>
+        <section class="comp-area">
+            <h1 class="comp-header">COMPUTER : <span class="scor-comp">0</span></h1>
+            <div class="img-comp-container">
+                <img src="img/batu.png" alt="batu" class="img-comp img-comp-1">
+                <img src="img/gunting.png" alt="gunting" class="img-comp img-comp-2">
+                <img src="img/kertas.png" alt="kertas" class="img-comp img-comp-3">
+            </div>
+            <div class="btn-comp-container">
+                <button class="btn-reset">Reset Scor</button>
+            </div>
+        </section>
+    </main>
+    <div class="popup-container"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
